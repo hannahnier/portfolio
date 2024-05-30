@@ -1,0 +1,88 @@
+.main {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main .contactContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.contactContainer a {
+  width: 50px;
+  height: 50px;
+  margin: 1em;
+  padding: 10px;
+  border-radius: 5px;
+  border: 3px solid transparent;
+  transition: background-color 0.5s ease;
+}
+
+.contactContainer a:hover {
+  background-color: var(--lightYellow);
+  border: 3px solid var(--darkFont);
+}
+
+/* .main .contactContainer form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main .contactContainer form * {
+  width: clamp(320px, 50vw, 500px);
+}
+
+.main .contactContainer form label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin: 0.2rem 0;
+  color: var(--darkFont);
+}
+
+.main .contactContainer form label span {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.main .contactContainer form input,
+select {
+  display: block;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+  height: 2rem;
+  border: 1px solid rgb(170, 170, 170);
+  cursor: pointer;
+  padding: 1em;
+}
+
+.main .contactContainer form textarea {
+  border: 1px solid rgb(170, 170, 170);
+  cursor: pointer;
+  padding: 1em;
+}
+
+.main .contactContainer input:focus,
+.main .contactContainer select:focus,
+.main .contactContainer textarea:focus {
+  outline-color: var(--pink);
+}
+
+.main .contactContainer form .formButton {
+  width: 100px;
+  margin-top: 0.5rem;
+  border-radius: 0.5em;
+  border: none;
+  background-color: var(--lightgreen);
+  transition: transform 0.1s;
+  cursor: pointer;
+  padding: 0;
+} */

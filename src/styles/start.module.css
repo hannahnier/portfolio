@@ -1,0 +1,204 @@
+.main {
+  position: relative;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/pixelart/");
+}
+
+.main .notebookContainer {
+  position: relative;
+}
+
+.main img.notebook {
+  width: 350px;
+}
+
+.main .welcome h1 {
+  width: 280px;
+  height: 170px;
+  margin: 0 35px;
+  padding: 0 30px;
+  padding-top: 30px;
+  font-size: 3em;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgb(93, 66, 248);
+  /* color: var(--fullYellow);
+  text-shadow: 4px 4px 4px rgb(115, 92, 240); */
+  transition: transform 1s ease;
+}
+
+main .welcome h1:hover {
+  transform: translate(20px);
+}
+
+.main .welcome h1::after {
+  content: "";
+  margin-left: 5px;
+  font-size: 0.8em;
+  border: 2px solid var(--pink);
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    border-color: transparent;
+  }
+  49% {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: var(--pink);
+  }
+  100% {
+    border-color: var(--pink);
+  }
+}
+
+.main .welcome h3 {
+  width: 280px;
+  margin: 0px 35px;
+  text-align: center;
+  color: var(--darkFont);
+  font-family: sans-serif;
+}
+
+.main img.rocket {
+  width: 90px;
+  position: absolute;
+  left: 100px;
+  top: 30px;
+  animation: buzz 0.1s linear 50 2s, flyOff 1.5s linear 7s forwards;
+}
+
+@keyframes buzz {
+  0% {
+    transform: translateY(1px);
+  }
+  50% {
+    transform: translateY(0);
+    transform: translateX(1px);
+  }
+  100% {
+    transform: translateY(1px);
+  }
+}
+
+@keyframes flyOff {
+  0% {
+    transform: translate(0 0);
+  }
+  40% {
+    transform: rotate(45deg);
+  }
+  70% {
+    transform: translate(200%, 200%) rotate(30deg);
+  }
+
+  90% {
+    transform: translate(30vw, -60vh) rotate(20deg);
+    opacity: 1;
+  }
+  91% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.main .notebookContainer .notebookLink {
+  position: absolute;
+  left: 75px;
+  top: 50px;
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.main .notebookContainer a {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 56px;
+  color: var(--pink);
+  text-decoration: none;
+  animation: appear 1s 9.5s both;
+}
+
+.main .notebookContainer a p {
+  font-size: 1.2rem;
+  opacity: 0;
+}
+
+.main .notebookContainer a:hover p {
+  opacity: 1;
+}
+
+@keyframes appear {
+  from {
+    display: none;
+    font-size: 0.8rem;
+  }
+  to {
+    display: block;
+  }
+}
+
+.workHint {
+  position: absolute;
+  bottom: 30px;
+  display: none; /* display on bigger devices only */
+  animation: hop 4s 3s ease infinite;
+  padding: 0.8em 1.5em;
+  background-color: var(--lightYellow);
+  border: none;
+  border-radius: 1em;
+  cursor: pointer;
+  font-size: 0.8em;
+  color: var(--darkFont);
+  text-decoration: none;
+}
+
+@keyframes hop {
+  0% {
+    transform: translate(0px);
+  }
+  40% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  53% {
+    transform: translateY(0px);
+  }
+  70% {
+    transform: translate(0px);
+  }
+  80% {
+    transform: translateY(10px);
+  }
+  83% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+
+@media (min-width: 768px) {
+  .main {
+    min-height: 100vh;
+  }
+  .main .welcome h1 {
+    padding-top: 0px;
+  }
+
+  .workHint {
+    display: block;
+  }
+}

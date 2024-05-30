@@ -1,0 +1,85 @@
+.main {
+  padding-top: 100px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.photoBackground {
+  width: 200px;
+  height: 220px;
+  background-color: rgb(247, 240, 159);
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.photo {
+  width: 200px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  transform: rotate(-8deg);
+  transition: transform 0.5s ease;
+}
+
+.photo:hover {
+  transform: rotate(0);
+}
+
+.textContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--fullYellow);
+  padding: 2em;
+  margin: 1em;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  font-size: 0.8em;
+  text-align: center;
+  color: var(--grey);
+  transition: transform 0.2s ease;
+}
+
+.text:hover {
+  transform: translateY(-10px);
+}
+
+.techStackContainer {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 500px;
+  margin: 1em;
+}
+
+.techStackContainer h4 {
+  background-color: var(--pink);
+  color: white;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  margin: 0.2em;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.techStackContainer h4:hover {
+  transform: translate(-10px);
+}

@@ -1,0 +1,106 @@
+.main {
+  position: relative;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main .container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  gap: 5px;
+  justify-content: center;
+  justify-items: center;
+}
+
+.workItemBox {
+  width: 320px;
+  min-height: 320px;
+  border-radius: 30px;
+  color: hsl(227, 100%, 10%);
+  background-color: var(--lightgreen);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1vw;
+  border: 5px solid var(--lightgreen);
+  transition: background-color 1s ease;
+}
+
+.workItemBox:hover {
+  background-color: rgba(209, 248, 209, 0);
+}
+
+.screenshot {
+  width: 80%;
+  min-height: 200px;
+  border-radius: 10px;
+  text-decoration: none;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  margin: 1em;
+  transition: transform 1s ease;
+}
+
+.screenshot:hover {
+  transform: scale(1.1);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  z-index: 2;
+  padding: 0.5em;
+  font-size: 0.8em;
+}
+
+.text * {
+  padding: 0.5em;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.links * {
+  transition: transform 1s ease;
+}
+
+.links *:hover {
+  transform: scale(1.2);
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.linkToSite {
+  text-decoration: none;
+  color: white;
+  border-radius: 3px;
+  background-color: var(--darkFont);
+}
+
+@media (min-width: 768px) {
+  .main div {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 700px;
+  }
+}
+
+@media (min-width: 480px) {
+  .main .workItemBox {
+    width: 350px;
+    min-height: 350px;
+  }
+}

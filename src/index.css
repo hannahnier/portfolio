@@ -1,0 +1,52 @@
+@import url(https://fonts.bunny.net/css?family=niramit:400);
+@import url(https://fonts.bunny.net/css?family=cousine:400);
+
+:root {
+  font-family: sans-serif;
+  --pink: rgb(255, 40, 105);
+  --lightgreen: rgb(179, 233, 199);
+  --lightblue: rgb(155, 177, 255);
+  --darkFont: rgb(8, 10, 37);
+  --grey: rgb(59, 59, 59);
+  --fullYellow: #ffd43b;
+  --lightYellow: rgb(247, 240, 159);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Niramit", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: linear-gradient(
+    100deg,
+    #c9bcee 0%,
+    #b8c7fc 40%,
+    var(--lightYellow) 150%
+  );
+  background-color: #c9bcee;
+  background-position: right bottom, left top;
+}
+
+h1,
+h2.sectionTitle,
+h4.sectionSubtitle {
+  color: var(--darkFont);
+}
+
+h2.sectionTitle {
+  padding-bottom: 30px;
+  font-family: sans-serif;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+
+}

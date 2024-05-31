@@ -48,11 +48,11 @@
   align-items: center;
   justify-content: center;
   background-color: var(--fullYellow);
-  padding: 2em;
+  padding: 1.5em;
   margin: 1em;
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   font-size: 0.8em;
   text-align: center;
   color: var(--grey);

@@ -9,14 +9,6 @@ import leafloversScreenshot from "../assets/work/leaflovers_screeshot2.png";
 
 const items = [
   {
-    url: "https://greenthumb.onrender.com/",
-    name: "Green Thumb",
-    description: "A Website for planning vegetable gardens, built with React",
-    techs: "React | HTML5 | CSS3",
-    imgSrc: greenthumbScreenshot,
-    gitHub: "https://github.com/hannahnier/green-thumb",
-  },
-  {
     url: "https://hb-paint.netlify.app/",
     name: "H&B Paint",
     subtitle: "Collaborative work",
@@ -34,6 +26,14 @@ const items = [
     techs: "React | HTML5 | CSS3",
     imgSrc: leafloversScreenshot,
     gitHub: "https://github.com/hannahnier/LeafLovers",
+  },
+  {
+    url: "https://greenthumb.onrender.com/",
+    name: "Green Thumb",
+    description: "A Website for planning vegetable gardens, built with React",
+    techs: "React | HTML5 | CSS3",
+    imgSrc: greenthumbScreenshot,
+    gitHub: "https://github.com/hannahnier/green-thumb",
   },
   {
     url: "https://hannahnier.github.io/Laundromat/",

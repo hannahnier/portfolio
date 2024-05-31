@@ -46,6 +46,7 @@ const StartSection = () => {
 
   return (
     <section className={style.main} name="start" id="start">
+      <div className={style.space}> </div>
       <div className={style.notebookContainer}>
         <img
           className={style.notebook}
@@ -71,6 +72,7 @@ const StartSection = () => {
         </h1>
         <h3>A Full-stack Web Developer based in Leipzig</h3>
       </div>
+      <div className={style.space}> </div>
 
       <a
         href="#work"

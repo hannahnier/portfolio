@@ -1,16 +1,33 @@
 .main {
-  position: relative;
-  padding-top: 100px;
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 5vw;
   justify-content: center;
   align-items: center;
   background-image: url("../assets/pixelart/");
+  min-height: 100vh;
 }
 
 .main .notebookContainer {
   position: relative;
+}
+
+.main .welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main .space {
+  height: 10vh;
+  width: 100vw;
+}
+
+.main .welcome > * {
+  margin: 0.5em;
 }
 
 .main img.notebook {
@@ -18,17 +35,12 @@
 }
 
 .main .welcome h1 {
-  width: 280px;
-  height: 170px;
-  margin: 0 35px;
-  padding: 0 30px;
-  padding-top: 30px;
+  width: 6em;
+  height: 3em;
   font-size: 3em;
   text-transform: uppercase;
   text-align: center;
   color: rgb(93, 66, 248);
-  /* color: var(--fullYellow);
-  text-shadow: 4px 4px 4px rgb(115, 92, 240); */
   transition: transform 1s ease;
 }
 
@@ -62,7 +74,6 @@ main .welcome h1:hover {
 
 .main .welcome h3 {
   width: 280px;
-  margin: 0px 35px;
   text-align: center;
   color: var(--darkFont);
   font-family: sans-serif;
@@ -97,11 +108,11 @@ main .welcome h1:hover {
     transform: rotate(45deg);
   }
   70% {
-    transform: translate(200%, 200%) rotate(30deg);
+    transform: translate(150%, 200%) rotate(30deg);
   }
 
   90% {
-    transform: translate(30vw, -60vh) rotate(20deg);
+    transform: translate(70vw, -60vh) rotate(20deg);
     opacity: 1;
   }
   91% {
@@ -191,13 +202,6 @@ main .welcome h1:hover {
 }
 
 @media (min-width: 768px) {
-  .main {
-    min-height: 100vh;
-  }
-  .main .welcome h1 {
-    padding-top: 0px;
-  }
-
   .workHint {
     display: block;
   }

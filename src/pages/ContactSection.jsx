@@ -11,12 +11,15 @@ const ContactSection = () => {
         <a href="mailto:hannahr@posteo.de" target="_blank">
           <img src={iconMail} alt="Email Icon" />
         </a>
-        <a href="https://github.com/hannahnier" target="_blank">
+        <a
+          href="https://github.com/hannahnier"
+          // target="_blank"
+        >
           <img src={iconGithub} alt="Github Icon" />
         </a>
         <a
           href="https://www.linkedin.com/in/hannah-rein-74419b30b"
-          target="_blank"
+          // target="_blank"
         >
           <img src={iconLinkedin} alt="Linkedin Icon" />
         </a>

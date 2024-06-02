@@ -34,11 +34,6 @@ li {
   background-color: var(--pink);
 }
 
-li a:hover {
-  background-color: var(--lightgreen);
-  border: 2px solid var(--lightgreen);
-}
-
 li a {
   height: 100%;
   width: 100%;
@@ -64,4 +59,11 @@ footer {
   padding: 1em;
   font-size: 0.7rem;
   background-color: var(--lightYellow);
+}
+
+@media (hover: hover) {
+  li a:hover {
+    background-color: var(--lightgreen);
+    border: 2px solid var(--lightgreen);
+  }
 }

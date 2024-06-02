@@ -23,10 +23,14 @@
   transition: background-color 0.5s ease;
 }
 
-.contactContainer a:hover {
-  background-color: var(--lightYellow);
-  border: 3px solid var(--darkFont);
+@media (hover: hover) {
+  .contactContainer a:hover {
+    background-color: var(--lightYellow);
+    border: 3px solid var(--darkFont);
+  }
 }
+
+/* for bringing a contact form back in later: */
 
 /* .main .contactContainer form {
   display: flex;

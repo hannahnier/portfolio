@@ -7,7 +7,6 @@ const WorkItem = ({ url, name, techs, imgSrc, gitHub, subtitle }) => {
       <a
         className={style.screenshot}
         href={url}
-        target="_blank"
         style={{ backgroundImage: `url(${imgSrc})` }}
       ></a>
       <div className={style.text}>
@@ -15,11 +14,11 @@ const WorkItem = ({ url, name, techs, imgSrc, gitHub, subtitle }) => {
         <p>{subtitle}</p>
         <p>{techs}</p>
         <div className={style.links}>
-          <a href={gitHub} target="_blank">
+          <a href={gitHub}>
             <img className={style.icon} src={iconGithub} alt="Github Icon" />
           </a>
           {name !== "TurboTyping" && (
-            <a href={url} target="_blank" className={style.linkToSite}>
+            <a href={url} className={style.linkToSite}>
               Visit site
             </a>
           )}

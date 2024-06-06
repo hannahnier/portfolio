@@ -13,6 +13,7 @@
   --primary: #ffd43b;
   --primaryLight: hsl(47, 100%, 82%);
   --secondary: #504077;
+  font-size: 16px;
 }
 
 * {

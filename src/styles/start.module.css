@@ -40,7 +40,9 @@
   font-size: 3em;
   text-transform: uppercase;
   text-align: center;
-  color: rgb(93, 66, 248);
+  /* color: rgb(93, 66, 248); */
+  color: rgb(95, 99, 138);
+  color: var(--secondary);
   transition: transform 1s ease;
 }
 
@@ -53,6 +55,7 @@ main .welcome h1:hover {
   margin-left: 5px;
   font-size: 0.8em;
   border: 2px solid var(--pink);
+  border: 2px solid var(--primary);
   animation: blink 1s infinite;
 }
 
@@ -66,9 +69,11 @@ main .welcome h1:hover {
 
   50% {
     border-color: var(--pink);
+    border: 2px solid var(--primary);
   }
   100% {
     border-color: var(--pink);
+    border: 2px solid var(--primary);
   }
 }
 
@@ -136,6 +141,7 @@ main .welcome h1:hover {
   font-family: "Courier New", Courier, monospace;
   font-size: 56px;
   color: var(--pink);
+  color: var(--primary);
   text-decoration: none;
   animation: appear 1s 9.5s both;
 }
@@ -166,6 +172,7 @@ main .welcome h1:hover {
   animation: hop 4s 3s ease infinite;
   padding: 0.8em 1.5em;
   background-color: var(--lightYellow);
+  background-color: var(--primary);
   border: none;
   border-radius: 1em;
   cursor: pointer;

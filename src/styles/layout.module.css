@@ -20,9 +20,11 @@ ul {
   flex-direction: row;
   justify-content: center;
   border: 2px solid var(--pink);
+  border: 2px solid var(--primary);
   border-radius: 10px;
   background-color: #fff;
   box-shadow: -10px 4px 0px 1px var(--lightYellow);
+  box-shadow: -10px 4px 0px 1px gray;
 }
 
 li {
@@ -32,6 +34,7 @@ li {
 
 .active {
   background-color: var(--pink);
+  background-color: var(--primary);
 }
 
 li a {
@@ -59,11 +62,15 @@ footer {
   padding: 1em;
   font-size: 0.7rem;
   background-color: var(--lightYellow);
+  background-color: rgb(192, 192, 192);
 }
 
 @media (hover: hover) {
   li a:hover {
     background-color: var(--lightgreen);
+    background-color: var(--primaryLight);
+
     border: 2px solid var(--lightgreen);
+    border: 2px solid var(--primaryLight);
   }
 }

@@ -10,6 +10,9 @@
   --grey: rgb(59, 59, 59);
   --fullYellow: #ffd43b;
   --lightYellow: rgb(247, 240, 159);
+  --primary: #ffd43b;
+  --primaryLight: hsl(47, 100%, 82%);
+  --secondary: #504077;
 }
 
 * {
@@ -24,13 +27,16 @@ html {
 }
 
 body {
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     100deg,
-    #c9bcee 0%,
+    #e6ddff 0%,
     #b8c7fc 40%,
-    var(--lightYellow) 150%
-  );
-  background-color: #c9bcee;
+    white 100%
+  ); */
+
+  background-color: #e6defc;
+
+  background-color: #fff;
   background-position: right bottom, left top;
 }
 
@@ -48,5 +54,4 @@ h2.sectionTitle {
 .icon {
   width: 1em;
   height: 1em;
-
 }

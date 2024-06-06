@@ -26,7 +26,9 @@
 @media (hover: hover) {
   .contactContainer a:hover {
     background-color: var(--lightYellow);
-    border: 3px solid var(--darkFont);
+    background-color: rgb(233, 232, 232);
+
+    border: 3px solid var(--secondary);
   }
 }
 

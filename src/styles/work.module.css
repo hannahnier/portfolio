@@ -21,13 +21,17 @@
   border-radius: 30px;
   color: hsl(227, 100%, 10%);
   background-color: var(--lightgreen);
+  background-color: var(--secondary);
+  background-color: white;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 1vw;
   border: 5px solid var(--lightgreen);
-  transition: background-color 1s ease;
+  border: 5px solid var(--secondary);
+  transition: background-color 1s ease, color 0.2s ease, border 0.4s ease;
 }
 
 .screenshot {
@@ -64,8 +68,11 @@
 }
 
 .icon {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+  border-radius: 3px;
 }
 
 .linkToSite {
@@ -88,7 +95,7 @@
   }
 
   .links *:hover {
-    transform: scale(1.2);
+    transform: scale(1.15);
   }
 
   .screenshot:hover {
@@ -97,6 +104,8 @@
 
   .workItemBox:hover {
     background-color: rgba(209, 248, 209, 0);
+    background-color: rgb(192, 192, 192);
+    border: 5px solid rgb(192, 192, 192);
   }
 }
 

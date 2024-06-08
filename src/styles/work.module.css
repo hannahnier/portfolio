@@ -61,24 +61,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 30px;
+  margin: 1em;
 }
 
 .icon {
   width: 30px;
   height: 30px;
-  padding: 0.2em;
-  margin: 0;
   border-radius: 3px;
   background-color: white;
+  margin: 0.5em;
+}
+
+.icon img {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .linkToSite {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: var(--background);
   border-radius: 3px;
   height: 30px;
-  margin: 0;
   background-color: var(--font);
+  margin: 0.5em;
 }
 
 @media (min-width: 768px) {

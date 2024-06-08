@@ -27,7 +27,7 @@ ul {
 
 li {
   list-style: none;
-  width: 80px;
+  width: 75px;
 }
 
 li a {
@@ -55,7 +55,7 @@ li a {
   background-color: var(--background);
   height: 80%;
   margin-left: 2vw;
-  width: 50px;
+  width: 55px;
   border-radius: 15px;
   display: flex;
   align-items: center;
@@ -94,5 +94,11 @@ footer {
   li a:hover {
     background-color: var(--primaryLight);
     border: 2px solid var(--primaryLight);
+  }
+}
+
+@media (min-width: 576px) {
+  li {
+    width: 85px;
   }
 }

@@ -3,11 +3,13 @@ import style from "../styles/start.module.css";
 import { useRef } from "react";
 import { useState } from "react";
 import rocket from "../assets/pixelart/px_rocket.png";
-import notebook from "../assets/pixelart/px_thinkpad3.png";
+import notebookLight from "../assets/pixelart/px_thinkpad3.png";
+import notebookDark from "../assets/pixelart/px_thinkpad2.png";
 import { useNavContext } from "../utils/Context";
 import iconArrow from "../assets/icons/angles-down-solid.svg";
 
 const StartSection = () => {
+  const { darkmode } = useNavContext();
   const { setActiveNav } = useNavContext();
   const textRef = useRef(null);
   const [typedText, setTypedText] = useState("");
@@ -51,7 +53,7 @@ const StartSection = () => {
         <img
           className={style.notebook}
           style={{ opacity: "0.85" }}
-          src={notebook}
+          src={darkmode ? notebookDark : notebookLight}
           alt="A notebook drawn in pixel art"
         />
         <img

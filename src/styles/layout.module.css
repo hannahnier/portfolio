@@ -5,12 +5,12 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  height: 5vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
   height: 38px;
-  color: #fff;
+  width: 100%;
+  color: var(--background);
   z-index: 3;
 }
 
@@ -19,22 +19,15 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  border: 2px solid var(--pink);
   border: 2px solid var(--primary);
   border-radius: 10px;
-  background-color: #fff;
-  box-shadow: -10px 4px 0px 1px var(--lightYellow);
+  background-color: white;
   box-shadow: -10px 4px 0px 1px gray;
 }
 
 li {
   list-style: none;
-  width: 85px;
-}
-
-.active {
-  background-color: var(--pink);
-  background-color: var(--primary);
+  width: 80px;
 }
 
 li a {
@@ -52,6 +45,39 @@ li a {
   cursor: pointer;
 }
 
+.active {
+  background-color: var(--primary);
+}
+
+/* Toggle for Darkmode */
+
+.toggleBox {
+  background-color: var(--background);
+  height: 80%;
+  margin-left: 2vw;
+  width: 50px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: center;
+  cursor: pointer;
+  border: 3px solid var(--primary);
+}
+
+.toggleBoxActive {
+  justify-content: flex-end;
+  border: 3px solid var(--primary);
+}
+
+.toggleInner {
+  background-color: var(--font);
+  height: 19px;
+  width: 19px;
+  margin: 5px;
+  border-radius: 50%;
+}
+
 /* Footer */
 
 footer {
@@ -61,16 +87,12 @@ footer {
   height: 3vh;
   padding: 1em;
   font-size: 0.7rem;
-  background-color: var(--lightYellow);
   background-color: rgb(192, 192, 192);
 }
 
 @media (hover: hover) {
   li a:hover {
-    background-color: var(--lightgreen);
     background-color: var(--primaryLight);
-
-    border: 2px solid var(--lightgreen);
     border: 2px solid var(--primaryLight);
   }
 }

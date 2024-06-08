@@ -19,17 +19,13 @@
   width: 320px;
   min-height: 320px;
   border-radius: 30px;
-  color: hsl(227, 100%, 10%);
-  background-color: var(--lightgreen);
-  background-color: var(--secondary);
-  background-color: white;
-
+  color: var(--font);
+  background-color: var(--background);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 1vw;
-  border: 5px solid var(--lightgreen);
   border: 5px solid var(--secondary);
   transition: background-color 1s ease, color 0.2s ease, border 0.4s ease;
 }
@@ -70,16 +66,19 @@
 .icon {
   width: 30px;
   height: 30px;
-  padding: 0;
+  padding: 0.2em;
   margin: 0;
   border-radius: 3px;
+  background-color: white;
 }
 
 .linkToSite {
   text-decoration: none;
-  color: white;
+  color: var(--background);
   border-radius: 3px;
-  background-color: var(--darkFont);
+  height: 30px;
+  margin: 0;
+  background-color: var(--font);
 }
 
 @media (min-width: 768px) {
@@ -103,9 +102,9 @@
   }
 
   .workItemBox:hover {
-    background-color: rgba(209, 248, 209, 0);
-    background-color: rgb(192, 192, 192);
+    background-color: var(--secondary);
     border: 5px solid rgb(192, 192, 192);
+    color: var(--background);
   }
 }
 

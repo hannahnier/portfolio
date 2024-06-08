@@ -17,7 +17,6 @@
 .photoBackground {
   width: 200px;
   height: 220px;
-  background-color: rgb(247, 240, 159);
   background-color: var(--secondary);
   border-radius: 10px;
   margin: 20px;
@@ -48,7 +47,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--fullYellow);
   background-color: var(--primary);
 
   padding: 1.5em;
@@ -74,10 +72,9 @@
 }
 
 .techStackContainer h4 {
-  background-color: var(--pink);
   background-color: var(--secondary);
 
-  color: white;
+  color: var(--background);
   border-radius: 0.5em;
   padding: 0.5em;
   margin: 0.2em;

@@ -1,19 +1,28 @@
 @import url(https://fonts.bunny.net/css?family=niramit:400);
 @import url(https://fonts.bunny.net/css?family=cousine:400);
 
-:root {
+[data-theme="light"] {
   font-family: sans-serif;
-  --pink: rgb(255, 40, 105);
-  --lightgreen: rgb(179, 233, 199);
-  --lightblue: rgb(155, 177, 255);
-  --darkFont: rgb(8, 10, 37);
-  --grey: rgb(59, 59, 59);
-  --fullYellow: #ffd43b;
-  --lightYellow: rgb(247, 240, 159);
+  /* --grey: rgb(59, 59, 59); */
+  /* --fullYellow: #ffd43b; */
+  /* --lightYellow: rgb(247, 240, 159); */
+  --background: white;
   --primary: #ffd43b;
   --primaryLight: hsl(47, 100%, 82%);
   --secondary: #504077;
-  font-size: 16px;
+  --font: rgb(8, 10, 37);
+  --darkFont: rgb(8, 10, 37);
+  --white: white;
+}
+
+[data-theme="dark"] {
+  --background: rgb(8, 10, 37);
+  --primary: #ffd43b;
+  --primaryLight: hsl(47, 100%, 82%);
+  --secondary: rgb(134, 153, 223);
+  --font: white;
+  --darkFont: rgb(8, 10, 37);
+  --white: white;
 }
 
 * {
@@ -28,23 +37,14 @@ html {
 }
 
 body {
-  /* background-image: linear-gradient(
-    100deg,
-    #e6ddff 0%,
-    #b8c7fc 40%,
-    white 100%
-  ); */
-
-  background-color: #e6defc;
-
-  background-color: #fff;
+  background-color: var(--background);
   background-position: right bottom, left top;
 }
 
 h1,
 h2.sectionTitle,
 h4.sectionSubtitle {
-  color: var(--darkFont);
+  color: var(--font);
 }
 
 h2.sectionTitle {

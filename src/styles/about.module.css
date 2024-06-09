@@ -27,12 +27,6 @@
   height: 220px;
   object-fit: cover;
   border-radius: 10px;
-  transform: rotate(-8deg);
-  transition: transform 0.5s ease;
-}
-
-.photo:hover {
-  transform: rotate(0);
 }
 
 .textContainer {
@@ -64,6 +58,10 @@
   transform: translateY(-10px);
 }
 
+.techTitle {
+  color: var(--font);
+}
+
 .techStackContainer {
   display: flex;
   flex-wrap: wrap;
@@ -73,7 +71,6 @@
 
 .techStackContainer h4 {
   background-color: var(--secondary);
-
   color: var(--background);
   border-radius: 0.5em;
   padding: 0.5em;

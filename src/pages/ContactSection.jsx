@@ -2,6 +2,7 @@ import style from "../styles/contact.module.css";
 import iconLinkedin from "../assets/icons/linkedin.svg";
 import iconGithub from "../assets/icons/github.svg";
 import iconMail from "../assets/icons/at-solid.svg";
+import Animated from "../components/Animated";
 
 const ContactSection = () => {
   return (
@@ -9,13 +10,20 @@ const ContactSection = () => {
       <h2 className={`sectionTitle ${style.contactTitle}`}>Get in touch</h2>
       <div className={style.contactContainer}>
         <a href="mailto:hannahr@posteo.de" target="_blank">
-          <img src={iconMail} alt="Email Icon" />
+          <Animated delay={0.4}>
+            <img src={iconMail} alt="Email Icon" />
+          </Animated>
         </a>
+
         <a href="https://github.com/hannahnier">
-          <img src={iconGithub} alt="Github Icon" />
+          <Animated delay={0.6}>
+            <img src={iconGithub} alt="Github Icon" />{" "}
+          </Animated>
         </a>
         <a href="https://www.linkedin.com/in/hannah-rein-74419b30b">
-          <img src={iconLinkedin} alt="Linkedin Icon" />
+          <Animated delay={0.8}>
+            <img src={iconLinkedin} alt="Linkedin Icon" />{" "}
+          </Animated>
         </a>
 
         {/* <form action="" method="POST">

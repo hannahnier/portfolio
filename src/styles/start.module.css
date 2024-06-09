@@ -8,7 +8,6 @@
   align-items: center;
   background-image: url("../assets/pixelart/");
   min-height: 100vh;
-  /* background-color: var(--background); */
 }
 
 .main .notebookContainer {

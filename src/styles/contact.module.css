@@ -92,6 +92,17 @@ select {
   padding: 0;
 }
 
+.messageNote {
+  background-color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 1em;
+  color: var(--darkFont);
+}
+
 @media (hover: hover) {
   .contactLinksContainer a:hover {
     background-color: var(--primary);

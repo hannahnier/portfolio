@@ -11,20 +11,35 @@ const ContactSection = () => {
     contactMessage: "",
   });
 
+  const [messageSent, setMessageSent] = useState(false);
+  const [error, setError] = useState(false);
+
   const submitForm = (e) => {
     e.preventDefault();
     const sendData = async () => {
-      const dataRaw = await fetch(
-        "https://hannahnier-server.onrender.com/sendemail",
-        // "http://localhost:3000/sendemail", // only for testing
-        {
-          method: "POST",
-          body: JSON.stringify(formData),
-          headers: { "Content-Type": "application/json" },
+      try {
+        const dataRaw = await fetch(
+          "https://hannahnier-server.onrender.com/sendemail",
+          // "http://localhost:3000/sendemail", // only for testing
+          {
+            method: "POST",
+            body: JSON.stringify(formData),
+            headers: { "Content-Type": "application/json" },
+          }
+        );
+        const data = await dataRaw.json();
+
+        // handling the result (message was either sent or error):
+        if (data && data.msg) {
+          setMessageSent(true);
+          console.log("erfolg");
+        } else {
+          setError(true);
         }
-      );
-      const data = await dataRaw.json();
-      return data;
+      } catch (e) {
+        setError(true);
+        console.log(JSON.stringify(e));
+      }
     };
 
     sendData();
@@ -46,60 +61,71 @@ const ContactSection = () => {
             </Animated>
           </a>
         </div>
-        <div className={style.formContainer}>
-          <form onSubmit={(e) => submitForm(e)}>
-            <label htmlFor="contactName">Full Name</label>
-            <input
-              onChange={(e) => {
-                setFormData({
-                  ...formData,
-                  [e.target.name]: e.target.value,
-                });
-              }}
-              type="text"
-              name="contactName"
-              id="contactName"
-              placeholder="Your name"
-              required
-              value={formData.contactName}
-            />
+        {!messageSent && (
+          <div className={style.formContainer}>
+            <form onSubmit={(e) => submitForm(e)}>
+              <label htmlFor="contactName">Full Name</label>
+              <input
+                onChange={(e) => {
+                  setFormData({
+                    ...formData,
+                    [e.target.name]: e.target.value,
+                  });
+                }}
+                type="text"
+                name="contactName"
+                id="contactName"
+                placeholder="Your name"
+                required
+                value={formData.contactName}
+              />
 
-            <label htmlFor="contactEmail">Email</label>
-            <input
-              onChange={(e) => {
-                setFormData({
-                  ...formData,
-                  [e.target.name]: e.target.value,
-                });
-              }}
-              type="email"
-              name="contactEmail"
-              id="contactEmail"
-              placeholder="Your email"
-              required
-              value={formData.contactEmail}
-            />
+              <label htmlFor="contactEmail">Email</label>
+              <input
+                onChange={(e) => {
+                  setFormData({
+                    ...formData,
+                    [e.target.name]: e.target.value,
+                  });
+                }}
+                type="email"
+                name="contactEmail"
+                id="contactEmail"
+                placeholder="Your email"
+                required
+                value={formData.contactEmail}
+              />
 
-            <label htmlFor="contactMessage">Message</label>
-            <textarea
-              onChange={(e) => {
-                setFormData({
-                  ...formData,
-                  [e.target.name]: e.target.value,
-                });
-              }}
-              name="contactMessage"
-              id="contactMessage"
-              cols="30"
-              rows="10"
-              placeholder="Your message"
-              required
-              value={formData.contactMessage}
-            ></textarea>
+              <label htmlFor="contactMessage">Message</label>
+              <textarea
+                onChange={(e) => {
+                  setFormData({
+                    ...formData,
+                    [e.target.name]: e.target.value,
+                  });
+                }}
+                name="contactMessage"
+                id="contactMessage"
+                cols="30"
+                rows="10"
+                placeholder="Your message"
+                required
+                value={formData.contactMessage}
+              ></textarea>
 
-            <input className={style.formButton} type="submit" />
-          </form>
-        </div>
+              <input className={style.formButton} type="submit" />
+            </form>
+          </div>
+        )}
+        {messageSent && (
+          <p className={style.messageNote}>Your message was sent!</p>
+        )}
+        {error && (
+          <p className={style.messageNote}>
+            Your message could not be sent. Please contact me via LinkedIn or
+            Github.
+          </p>
+        )}
       </div>
     </section>
   );

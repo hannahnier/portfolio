@@ -19,7 +19,7 @@ const ContactSection = () => {
     const sendData = async () => {
       try {
         const dataRaw = await fetch(
-          "https://hannahnier-server.onrender.com/sendemil",
+          "https://hannahnier-server.onrender.com/sendemail",
           // "http://localhost:3000/sendemail", // only for testing
           {
             method: "POST",
@@ -37,7 +37,6 @@ const ContactSection = () => {
         }
       } catch (e) {
         setError(true);
-        console.log(JSON.stringify(e));
       }
     };
 
@@ -60,7 +59,7 @@ const ContactSection = () => {
             </Animated>
           </a>
         </div>
-        {!messageSent && (
+        {!messageSent && !error && (
           <div className={style.formContainer}>
             <form onSubmit={(e) => submitForm(e)}>
               <label htmlFor="contactName">Full Name</label>

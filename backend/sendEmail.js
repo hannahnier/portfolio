@@ -17,11 +17,14 @@ const transporter = nodemailer.createTransport({
 });
 
 export const sendEmail = async () => {
+  const contactName = "x";
+  const contactEmail = "x@x.de";
+  const contactMessage = "kkkks";
   await transporter.sendMail({
     from: SENDER_EMAIL,
     to: EMAIL_TO,
     subject: "[hannahnier] Neue Nachricht von meinem Kontaktformular",
-    text: `Hello!`,
-    html: "<b>Hello world?</b>",
+    text: `Hello`,
+    html: `<b>Name</b>: ${contactName}; <br><b>Email:</b> ${contactEmail}<br> <b>Message</b> ${contactMessage}`,
   });
 };

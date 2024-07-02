@@ -7,13 +7,20 @@
 
 .main .contactContainer {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
 }
 
-.contactContainer a {
+.main .contactLinksContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactLinksContainer a {
   width: 50px;
   height: 50px;
   margin: 1em;
@@ -24,41 +31,34 @@
   transition: background-color 0.5s ease, border 0.5s ease;
 }
 
-@media (hover: hover) {
-  .contactContainer a:hover {
-    background-color: var(--primary);
-    border: 3px solid var(--font);
-  }
-}
+/* Contact form: */
 
-/* for bringing a contact form back in later: */
-
-/* .main .contactContainer form {
+.main .formContainer form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.main .contactContainer form * {
+.main .formContainer form * {
   width: clamp(320px, 50vw, 500px);
 }
 
-.main .contactContainer form label {
+.main .formContainer form label {
   display: block;
   font-weight: 600;
   font-size: 0.9rem;
   margin: 0.2rem 0;
-  color: var(--darkFont);
+  color: var(--font);
 }
 
-.main .contactContainer form label span {
+.main .formContainer form label span {
   font-style: italic;
   font-weight: 400;
   font-size: 0.8rem;
 }
 
-.main .contactContainer form input,
+.main .formContainer form input,
 select {
   display: block;
   font-weight: 400;
@@ -69,25 +69,36 @@ select {
   padding: 1em;
 }
 
-.main .contactContainer form textarea {
+.main .formContainer form textarea {
   border: 1px solid rgb(170, 170, 170);
   cursor: pointer;
   padding: 1em;
 }
 
-.main .contactContainer input:focus,
-.main .contactContainer select:focus,
-.main .contactContainer textarea:focus {
-  outline-color: var(--pink);
+.main .formContainer input:focus,
+.main .formContainer select:focus,
+.main .formContainer textarea:focus {
+  outline-color: var(--secondary);
 }
 
-.main .contactContainer form .formButton {
+.main .formContainer form .formButton {
   width: 100px;
   margin-top: 0.5rem;
   border-radius: 0.5em;
   border: none;
-  background-color: var(--lightgreen);
-  transition: transform 0.1s;
+  background-color: var(--primary);
+  transition: transform 0.5s;
   cursor: pointer;
   padding: 0;
-} */
+}
+
+@media (hover: hover) {
+  .contactLinksContainer a:hover {
+    background-color: var(--primary);
+    border: 3px solid var(--font);
+  }
+
+  .formButton:hover {
+    transform: scale(1.1);
+  }
+}

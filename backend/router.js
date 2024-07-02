@@ -3,4 +3,4 @@ import { sendForm } from "./controller.js";
 
 export const router = express.Router();
 
-router.route("/").get(sendForm);
+router.route("/").post(sendForm);

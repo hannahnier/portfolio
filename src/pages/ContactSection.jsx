@@ -19,7 +19,7 @@ const ContactSection = () => {
     const sendData = async () => {
       try {
         const dataRaw = await fetch(
-          "https://hannahnier-server.onrender.com/sendemail",
+          "https://hannahnier-server.onrender.com/sendemil",
           // "http://localhost:3000/sendemail", // only for testing
           {
             method: "POST",
@@ -32,7 +32,6 @@ const ContactSection = () => {
         // handling the result (message was either sent or error):
         if (data && data.msg) {
           setMessageSent(true);
-          console.log("erfolg");
         } else {
           setError(true);
         }

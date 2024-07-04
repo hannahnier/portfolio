@@ -92,6 +92,10 @@ select {
   padding: 0;
 }
 
+.loader {
+  color: var(--font);
+}
+
 .messageNote {
   background-color: var(--primary);
   display: flex;

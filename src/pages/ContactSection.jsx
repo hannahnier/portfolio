@@ -3,6 +3,7 @@ import iconLinkedin from "../assets/icons/linkedin.svg";
 import iconGithub from "../assets/icons/github.svg";
 import Animated from "../components/Animated";
 import { useState } from "react";
+import { ClipLoader, PulseLoader } from "react-spinners";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -11,11 +12,13 @@ const ContactSection = () => {
     contactMessage: "",
   });
 
+  const [loading, setLoading] = useState(false);
   const [messageSent, setMessageSent] = useState(false);
   const [error, setError] = useState(false);
 
   const submitForm = (e) => {
     e.preventDefault();
+    setLoading(true);
     const sendData = async () => {
       try {
         const dataRaw = await fetch(
@@ -31,12 +34,15 @@ const ContactSection = () => {
 
         // handling the result (message was either sent or error):
         if (data && data.msg) {
+          setLoading(false);
           setMessageSent(true);
         } else {
           setError(true);
+          setLoading(false);
         }
       } catch (e) {
         setError(true);
+        setLoading(false);
       }
     };
 
@@ -111,9 +117,16 @@ const ContactSection = () => {
                 value={formData.contactMessage}
               ></textarea>
 
-              <input className={style.formButton} type="submit" />
+              {!loading && <input className={style.formButton} type="submit" />}
             </form>
           </div>
+        )}
+        {loading && (
+          <PulseLoader
+            color="rgb(134, 153, 223)"
+            loading={loading}
+            aria-label="Loading Animation"
+          />
         )}
         {messageSent && (
           <p className={style.messageNote}>Your message was sent!</p>

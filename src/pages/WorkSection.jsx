@@ -6,8 +6,17 @@ import greenthumbScreenshot from "../assets/work/screenshot_greenthumb.png";
 import turbotypingScreenshot from "../assets/work/screenshot_turbotyping.png";
 import paintScreenshot from "../assets/work/screenshot_paint.png";
 import leafloversScreenshot from "../assets/work/leaflovers_screeshot2.png";
+import clockworkScreenshot from "../assets/work/screenshot_clockwork.png";
 
 const items = [
+  {
+    url: "https://clockworkclementine.onrender.com/",
+    name: "Clockwork Clementine",
+    description: "A calendar app with a backend server",
+    techs: "Node | Express | MongoDB | React",
+    imgSrc: clockworkScreenshot,
+    gitHub: "https://github.com/hannahnier/ClockworkClementine",
+  },
   {
     url: "https://hb-paint.netlify.app/",
     name: "H&B Paint",

@@ -54,12 +54,15 @@ const ContactSection = () => {
       <h2 className={`sectionTitle ${style.contactTitle}`}>Get in touch</h2>
       <div className={style.contactContainer}>
         <div className={style.contactLinksContainer}>
-          <a href="https://github.com/hannahnier">
+          <a href="https://github.com/hannahnier" target="_blank">
             <Animated delay={0.6}>
               <img src={iconGithub} alt="Github Icon" />{" "}
             </Animated>
           </a>
-          <a href="https://www.linkedin.com/in/hannah-rein-74419b30b">
+          <a
+            href="https://www.linkedin.com/in/hannah-rein-74419b30b"
+            target="_blank"
+          >
             <Animated delay={0.8}>
               <img src={iconLinkedin} alt="Linkedin Icon" />{" "}
             </Animated>

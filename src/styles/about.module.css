@@ -64,9 +64,12 @@
 
 .techStackContainer {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   max-width: 500px;
   margin: 1em;
+  padding: 0 40px;
 }
 
 .techStackContainer h4 {

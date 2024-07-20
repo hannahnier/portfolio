@@ -14,7 +14,7 @@ const WorkItem = ({ url, name, techs, imgSrc, gitHub, subtitle }) => {
         <p>{subtitle}</p>
         <p>{techs}</p>
         <div className={style.links}>
-          <a href={gitHub} className={style.icon}>
+          <a href={gitHub} className={style.icon} target="_blank">
             <img src={iconGithub} alt="Github Icon" />
           </a>
           {name !== "TurboTyping" && (

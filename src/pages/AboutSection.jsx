@@ -8,10 +8,9 @@ const AboutSection = () => {
     "JavaScript",
     "HTML5",
     "CSS3",
-    "SASS",
     "Tailwind",
+    "SASS",
     "React",
-    "Vite",
     "Node.js",
     "Express.js",
     "MongoDB",
@@ -38,13 +37,13 @@ const AboutSection = () => {
           <Animated delay={0.2}>
             <p className={style.text}>
               I have always been captivated by numbers, logics and code. That is
-              why I am incredibly excited to pursue this passion professionally.
+              why I am excited to pursue this passion professionally now.
             </p>
           </Animated>
           <Animated delay={0.4}>
             <p className={style.text}>
-              With an eye for looks and a heart for efficient programming, I
-              work diligently to create inspiring and innovative solutions.
+              Whether frontend or backend - I work diligently to create
+              inspiring and innovative solutions.
             </p>
           </Animated>
         </div>

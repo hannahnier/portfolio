@@ -3,7 +3,7 @@ import iconLinkedin from "../assets/icons/linkedin.svg";
 import iconGithub from "../assets/icons/github.svg";
 import Animated from "../components/Animated";
 import { useState } from "react";
-import { ClipLoader, PulseLoader } from "react-spinners";
+import { PulseLoader } from "react-spinners";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({

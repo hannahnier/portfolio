@@ -1,6 +1,8 @@
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import { useEffect, useState } from "react";
+import styles from "../styles/layout.module.css";
+import arrowUp from "../assets/icons/arrowUp.svg";
 
 const Layout = () => {
   // scroll button for all pages:
@@ -26,11 +28,8 @@ const Layout = () => {
   return (
     <div>
       {showScrollButton && (
-        <button
-          onClick={scrollToTop}
-          style={{ position: "fixed", right: 0, bottom: 0, zIndex: 5 }}
-        >
-          Back to top
+        <button className={styles.scrollButton} onClick={scrollToTop}>
+          <img src={arrowUp} alt="icon for scrolling to top of page" />
         </button>
       )}
       <Header />

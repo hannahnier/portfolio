@@ -91,6 +91,10 @@
   margin: 0.5em;
 }
 
+.collabLink {
+  color: var(--font);
+}
+
 @media (min-width: 768px) {
   .main div {
     grid-template-columns: repeat(2, 1fr);

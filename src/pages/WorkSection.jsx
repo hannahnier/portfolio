@@ -20,7 +20,9 @@ const items = [
   {
     url: "https://hb-paint.netlify.app/",
     name: "H&B Paint",
-    subtitle: "Collaborative work",
+    subtitle: "Collaborative work with",
+    subtitleLinked: "@barisbalcimusic",
+    subtitleLink: "https://github.com/barisbalcimusic",
     description:
       "An online drawing program that offers essential tools for creative work",
     techs: "JavaScript | HTML5 | SCSS ",
@@ -30,7 +32,9 @@ const items = [
   {
     url: "https://leaflovers.onrender.com",
     name: "LeafLovers",
-    subtitle: "Collaborative work",
+    subtitle: "Collaborative work with",
+    subtitleLinked: "@luisePkt",
+    subtitleLink: "https://github.com/luisePkt",
     description: "A plant matching app, built with React",
     techs: "React | HTML5 | CSS3",
     imgSrc: leafloversScreenshot,
@@ -77,6 +81,8 @@ const WorkSection = () => {
             imgSrc={item.imgSrc}
             gitHub={item.gitHub}
             subtitle={item.subtitle}
+            subtitleLinked={item.subtitleLinked}
+            subtitleLink={item.subtitleLink}
           />
         ))}
       </div>

@@ -4,5 +4,5 @@ import { getUser } from "./controller.js";
 
 export const router = express.Router();
 
-router.route("/").get(getUser);
-router.route("/").post(sendForm);
+router.route("/getUser").get(getUser);
+router.route("/sendemail").post(sendForm);

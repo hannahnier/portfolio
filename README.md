@@ -27,3 +27,4 @@ If you want to run the project locally, please follow these steps:
 - **React**
 - **Vite**
 - **CSS Modules**
+- **Nodemailer**

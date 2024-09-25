@@ -12,7 +12,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
-app.use("/sendemail", router);
+app.use("/", router);
 app.use(errorMiddleware);
 
 const startServer = () => {

@@ -12,12 +12,6 @@ export const getUser = async (req, res, next) => {
 
 export const sendForm = async (req, res, next) => {
   const { contactName, contactEmail, contactMessage } = req.body;
-  console.log("controller.js: req.body.contactName:", req.body.contactName);
-  console.log("controller.js: req.body.contactEmail:", req.body.contactEmail);
-  console.log(
-    "controller.js: req.body.contactMessage:",
-    req.body.contactMessage
-  );
 
   try {
     await sendEmail(contactName, contactEmail, contactMessage)

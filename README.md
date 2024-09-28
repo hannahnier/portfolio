@@ -2,7 +2,14 @@
 
 This fully responsive single-page portfolio application was built with React and Vite and uses CSS Modules for styling.
 
-## Website Link
+## Preview
+
+The portfolio website comes with a dark and light mode:
+
+![Screenshots of website in light mode](./src/assets/screenshots/screenshot_light.png)
+![Screenshots of website in dark mode](./src/assets/screenshots/screenshot_dark.png)
+
+## Explore the Website
 
 Take a look at the deployed website here: [https://hannahnier.onrender.com/](https://hannahnier.onrender.com/)
 

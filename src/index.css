@@ -1,19 +1,18 @@
 @import url(https://fonts.bunny.net/css?family=niramit:400);
 @import url(https://fonts.bunny.net/css?family=cousine:400);
 
+/* COLORS: Light */
+
 [data-theme="light"] {
   font-family: sans-serif;
-  /* --grey: rgb(59, 59, 59); */
-  /* --fullYellow: #ffd43b; */
-  /* --lightYellow: rgb(247, 240, 159); */
   --background: white;
   --primary: #ffd43b;
   --primaryLight: hsl(47, 100%, 82%);
   --secondary: #504077;
   --font: rgb(8, 10, 37);
-  --darkFont: rgb(8, 10, 37);
-  --white: white;
 }
+
+/* COLORS: Dark */
 
 [data-theme="dark"] {
   --background: rgb(8, 10, 37);
@@ -21,11 +20,15 @@
   --primaryLight: hsl(47, 100%, 82%);
   --secondary: rgb(134, 153, 223);
   --font: white;
-  --darkFont: rgb(8, 10, 37);
-  --white: white;
 }
 
 * {
+  /* COLORS: Universal: */
+  --darkFont: rgb(8, 10, 37);
+  --white: white;
+  --purple: #504077;
+  --blue: rgb(134, 153, 223);
+
   box-sizing: border-box;
   padding: 0;
   margin: 0;

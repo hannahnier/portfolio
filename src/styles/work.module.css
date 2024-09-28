@@ -19,14 +19,14 @@
   width: 320px;
   min-height: 320px;
   border-radius: 30px;
-  color: var(--font);
-  background-color: var(--background);
+  color: var(--darkFont);
+  background-color: var(--white);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 1vw;
-  border: 5px solid var(--secondary);
+  box-shadow: 0px 0px 5px 1px rgb(167, 167, 167);
   transition: background-color 1s ease, color 0.2s ease, border 0.4s ease;
 }
 
@@ -66,9 +66,10 @@
 }
 
 .icon {
-  width: 30px;
-  height: 30px;
-  border-radius: 3px;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--darkFont);
   background-color: white;
   margin: 0.5em;
 }
@@ -84,16 +85,18 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: var(--background);
-  border-radius: 3px;
-  height: 30px;
-  background-color: var(--font);
+  color: var(--darkFont);
+  border: 2px solid var(--darkFont);
+  border-radius: 5px;
+  height: 40px;
+  background-color: var(--white);
   margin: 0.5em;
 }
 
-.collabLink {
-  color: var(--font);
-  transition: color 0.2s ease;
+.collabLinks {
+  color: var(--darkFont);
+  padding: 0;
+  display: inline;
 }
 
 @media (min-width: 768px) {
@@ -117,13 +120,7 @@
   }
 
   .workItemBox:hover {
-    background-color: var(--secondary);
-    border: 5px solid rgb(192, 192, 192);
-    color: var(--background);
-  }
-
-  .workItemBox:hover .collabLink {
-    color: var(--background);
+    background-color: var(--blue);
   }
 }
 

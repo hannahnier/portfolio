@@ -1,6 +1,7 @@
 import WorkItem from "../components/WorkItem";
 import style from "../styles/work.module.css";
 
+import gemischtegefuehleScreenshot from "../assets/work/screenshot_gemischtegefuehle.png";
 import laundromatScreenshot from "../assets/work/laundromat_screenshot.png";
 import greenthumbScreenshot from "../assets/work/screenshot_greenthumb.png";
 import turbotypingScreenshot from "../assets/work/screenshot_turbotyping.png";
@@ -10,33 +11,57 @@ import clockworkScreenshot from "../assets/work/screenshot_clockwork.png";
 
 const items = [
   {
+    url: "https://gemischtegefuehle.onrender.com/",
+    name: "gemischteGefühle",
+    collab: [
+      {
+        name: "barisbalcimusic",
+        link: "https://github.com/barisbalcimusic",
+        id: 1,
+      },
+      { name: "luisePkt", link: "https://github.com/luisePkt", id: 2 },
+      {
+        name: "nadjascodejourney",
+        link: "https://github.com/nadjascodejourney",
+        id: 3,
+      },
+    ],
+    description:
+      "A mental health application for tracking and analyzing emotional states in depth",
+    tech: "React | Tailwind | Node | Express | MongoDB | React",
+    imgSrc: gemischtegefuehleScreenshot,
+    gitHub: "https://github.com/MindfulStudio/frontend/",
+  },
+  {
     url: "https://clockworkclementine.onrender.com/",
     name: "Clockwork Clementine",
     description: "A calendar app with a backend server",
-    techs: "Node | Express | MongoDB | React",
+    tech: "Node | Express | MongoDB | React",
     imgSrc: clockworkScreenshot,
     gitHub: "https://github.com/hannahnier/ClockworkClementine",
   },
   {
     url: "https://hb-paint.netlify.app/",
     name: "H&B Paint",
-    subtitle: "Collaborative work with",
-    subtitleLinked: "@barisbalcimusic",
-    subtitleLink: "https://github.com/barisbalcimusic",
+    collab: [
+      {
+        name: "barisbalcimusic",
+        link: "https://github.com/barisbalcimusic",
+        id: 1,
+      },
+    ],
     description:
       "An online drawing program that offers essential tools for creative work",
-    techs: "JavaScript | HTML5 | SCSS ",
+    tech: "JavaScript | HTML5 | SCSS ",
     imgSrc: paintScreenshot,
     gitHub: "https://github.com/hannahnier/paint",
   },
   {
     url: "https://leaflovers.onrender.com",
     name: "LeafLovers",
-    subtitle: "Collaborative work with",
-    subtitleLinked: "@luisePkt",
-    subtitleLink: "https://github.com/luisePkt",
+    collab: [{ name: "luisePkt", link: "https://github.com/luisePkt", id: 1 }],
     description: "A plant matching app, built with React",
-    techs: "React | HTML5 | CSS3",
+    tech: "React | HTML5 | CSS3",
     imgSrc: leafloversScreenshot,
     gitHub: "https://github.com/hannahnier/LeafLovers",
   },
@@ -44,7 +69,7 @@ const items = [
     url: "https://greenthumb.onrender.com/",
     name: "Green Thumb",
     description: "A Website for planning vegetable gardens, built with React",
-    techs: "React | HTML5 | CSS3",
+    tech: "React | HTML5 | CSS3",
     imgSrc: greenthumbScreenshot,
     gitHub: "https://github.com/hannahnier/green-thumb",
   },
@@ -52,7 +77,7 @@ const items = [
     url: "https://hannahnier.github.io/Laundromat/",
     name: "Laundromat",
     description: "A Native CSS Website for a Fictitious London Laundrette",
-    techs: "HTML5 | CSS3",
+    tech: "HTML5 | CSS3",
     imgSrc: laundromatScreenshot,
     gitHub: "https://github.com/hannahnier/Laundromat",
   },
@@ -60,7 +85,7 @@ const items = [
     url: "https://github.com/hannahnier/TurboTyping",
     name: "TurboTyping",
     description: "A simple terminal game for measuring your typing speed",
-    techs: "JavaScript | Node.js",
+    tech: "JavaScript | Node.js",
     imgSrc: turbotypingScreenshot,
     gitHub: "https://github.com/hannahnier/TurboTyping",
   },
@@ -77,12 +102,10 @@ const WorkSection = () => {
             url={item.url}
             name={item.name}
             description={item.description}
-            techs={item.techs}
+            tech={item.tech}
             imgSrc={item.imgSrc}
             gitHub={item.gitHub}
-            subtitle={item.subtitle}
-            subtitleLinked={item.subtitleLinked}
-            subtitleLink={item.subtitleLink}
+            collab={item.collab}
           />
         ))}
       </div>

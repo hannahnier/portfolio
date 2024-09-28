@@ -14,6 +14,9 @@ const AboutSection = () => {
     "Node.js",
     "Express.js",
     "MongoDB",
+    "Mongoose",
+    "REST API",
+    "npm",
     "Git",
   ];
   return (

@@ -1,16 +1,7 @@
 import style from "../styles/work.module.css";
 import iconGithub from "../assets/icons/github.svg";
 
-const WorkItem = ({
-  url,
-  name,
-  techs,
-  imgSrc,
-  gitHub,
-  subtitle,
-  subtitleLinked,
-  subtitleLink,
-}) => {
+const WorkItem = ({ url, name, tech, imgSrc, gitHub, collab }) => {
   return (
     <div className={style.workItemBox}>
       <a
@@ -21,13 +12,24 @@ const WorkItem = ({
       ></a>
       <div className={style.text}>
         <h3>{name}</h3>
-        <p>
-          {subtitle}
-          <a href={subtitleLink} className={style.collabLink} target="_blank">
-            {subtitleLinked}
-          </a>
-        </p>
-        <p>{techs}</p>
+        <p>{tech}</p>
+        {collab && (
+          <p>
+            Collab:{" "}
+            {collab.map((link) => (
+              <div key={link.id} className={style.collabLinks}>
+                <a
+                  href={link.link}
+                  target="_blank"
+                  className={style.collabLinks}
+                >
+                  {link.name}
+                </a>
+                {link.id < collab.length ? ", " : ""}
+              </div>
+            ))}
+          </p>
+        )}
         <div className={style.links}>
           <a href={gitHub} className={style.icon} target="_blank">
             <img src={iconGithub} alt="Github Icon" />

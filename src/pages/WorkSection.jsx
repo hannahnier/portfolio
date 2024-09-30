@@ -28,7 +28,7 @@ const items = [
     ],
     description:
       "A mental health application for tracking and analyzing emotional states in depth",
-    tech: "React | Tailwind | Node | Express | MongoDB | React",
+    tech: "React | Tailwind | Node | Express | MongoDB",
     imgSrc: gemischtegefuehleScreenshot,
     gitHub: "https://github.com/MindfulStudio/frontend/",
   },

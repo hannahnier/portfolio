@@ -55,7 +55,9 @@ const ContactSection = () => {
 
   return (
     <section className={style.main} name="contact" id="contact">
-      <h2 className={`sectionTitle ${style.contactTitle}`}>Get in touch</h2>
+      <h2 className={`sectionTitle ${style.contactTitle}`}>
+        {contactSection[language].title}
+      </h2>
       <div className={style.contactContainer}>
         <div className={style.contactLinksContainer}>
           <a href="https://github.com/hannahnier" target="_blank">

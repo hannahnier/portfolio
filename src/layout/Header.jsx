@@ -1,11 +1,13 @@
 import Navigation from "./Navigation";
-import Toggle from "./Toggle";
+import ToggleDark from "./ToggleDark";
+import ToggleLang from "./ToggleLang";
 
 const Header = () => {
   return (
     <header>
       <Navigation />
-      <Toggle />
+      <ToggleDark />
+      <ToggleLang />
     </header>
   );
 };

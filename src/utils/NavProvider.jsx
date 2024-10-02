@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 const NavContext = createContext();
 
-const Context = ({ children }) => {
+const NavProvider = ({ children }) => {
   const [activeNav, setActiveNav] = useState("#");
   const [darkmode, setDarkmode] = useState(false);
 
@@ -23,6 +23,6 @@ const Context = ({ children }) => {
   );
 };
 
-export default Context;
+export default NavProvider;
 
 export const useNavContext = () => useContext(NavContext);

@@ -5,15 +5,18 @@ import { useState } from "react";
 import rocket from "../assets/pixelart/px_rocket.png";
 import notebookLight from "../assets/pixelart/px_thinkpad3.png";
 import notebookDark from "../assets/pixelart/px_thinkpad2.png";
-import { useNavContext } from "../utils/Context";
+import { useNavContext } from "../utils/NavProvider";
+import { useLangContext } from "../utils/LangProvider";
 import iconArrow from "../assets/icons/angles-down-solid.svg";
+import { startSection } from "../utils/dictionary";
 
 const StartSection = () => {
   const { darkmode } = useNavContext();
   const { setActiveNav } = useNavContext();
+  const { language } = useLangContext();
   const textRef = useRef(null);
   const [typedText, setTypedText] = useState("");
-  const fullText = "Hi, I am Hannah";
+  const fullText = startSection[language].title;
 
   useEffect(() => {
     let letterCount = 0;
@@ -64,7 +67,7 @@ const StartSection = () => {
         <div className={style.notebookLink}>
           <a href="#work" onClick={() => setActiveNav("#work")}>
             &lt;&frasl;&gt;
-            <p>My Projects</p>
+            <p>{startSection[language].workRef}</p>
           </a>
         </div>
       </div>
@@ -72,7 +75,7 @@ const StartSection = () => {
         <h1 className="typewriter" ref={textRef}>
           {typedText}
         </h1>
-        <h3>A Full-stack Web Developer based in Leipzig</h3>
+        <h3>{startSection[language].subtitle}</h3>
       </div>
       <div className={style.space}> </div>
 
@@ -81,7 +84,7 @@ const StartSection = () => {
         className={style.workHint}
         onClick={() => setActiveNav("#work")}
       >
-        Check out my work{" "}
+        {startSection[language].workRefButton}{" "}
         <img
           src={iconArrow}
           className="icon"

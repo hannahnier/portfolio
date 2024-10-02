@@ -1,7 +1,10 @@
 import style from "../styles/work.module.css";
 import iconGithub from "../assets/icons/github.svg";
+import { workSection } from "../utils/dictionary";
+import { useLangContext } from "../utils/LangProvider";
 
 const WorkItem = ({ url, name, tech, imgSrc, gitHub, collab }) => {
+  const { language } = useLangContext();
   return (
     <div className={style.workItemBox}>
       <a
@@ -15,9 +18,9 @@ const WorkItem = ({ url, name, tech, imgSrc, gitHub, collab }) => {
         <p>{tech}</p>
         {collab && (
           <p>
-            Collab:{" "}
+            {workSection[language].teamRef}
             {collab.map((link) => (
-              <div key={link.id} className={style.collabLinks}>
+              <span key={link.id} className={style.collabLinks}>
                 <a
                   href={link.link}
                   target="_blank"
@@ -26,7 +29,7 @@ const WorkItem = ({ url, name, tech, imgSrc, gitHub, collab }) => {
                   {link.name}
                 </a>
                 {link.id < collab.length ? ", " : ""}
-              </div>
+              </span>
             ))}
           </p>
         )}
@@ -36,7 +39,7 @@ const WorkItem = ({ url, name, tech, imgSrc, gitHub, collab }) => {
           </a>
           {name !== "TurboTyping" && (
             <a href={url} className={style.linkToSite} target="_blank">
-              Visit site
+              {workSection[language].siteRef}
             </a>
           )}
         </div>

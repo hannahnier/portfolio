@@ -1,9 +1,13 @@
+import { useLangContext } from "../utils/LangProvider";
+import { footer } from "../utils/dictionary";
+
 const Footer = () => {
+  const { language } = useLangContext();
   return (
     <footer>
       {" "}
       <div>
-        <p>&copy; 2024 Hannah Rein. All rights reserved.</p>
+        <p>&copy; {footer[language]}</p>
       </div>
     </footer>
   );

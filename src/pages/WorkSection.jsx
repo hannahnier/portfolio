@@ -8,6 +8,8 @@ import turbotypingScreenshot from "../assets/work/screenshot_turbotyping.png";
 import paintScreenshot from "../assets/work/screenshot_paint.png";
 import leafloversScreenshot from "../assets/work/leaflovers_screeshot2.png";
 import clockworkScreenshot from "../assets/work/screenshot_clockwork.png";
+import { workSection } from "../utils/dictionary";
+import { useLangContext } from "../utils/LangProvider";
 
 const items = [
   {
@@ -92,9 +94,11 @@ const items = [
 ];
 
 const WorkSection = () => {
+  const { language } = useLangContext();
+
   return (
     <section className={style.main} name="work" id="work">
-      <h2 className="sectionTitle">Work</h2>
+      <h2 className="sectionTitle">{workSection[language].title}</h2>
       <div className={style.container}>
         {items.map((item, index) => (
           <WorkItem

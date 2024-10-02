@@ -4,8 +4,12 @@ import iconGithub from "../assets/icons/github.svg";
 import Animated from "../components/Animated";
 import { useState } from "react";
 import { PulseLoader } from "react-spinners";
+import { useLangContext } from "../utils/LangProvider";
+import { contactSection } from "../utils/dictionary";
 
 const ContactSection = () => {
+  const { language } = useLangContext();
+
   const [formData, setFormData] = useState({
     contactName: "",
     contactEmail: "",
@@ -71,7 +75,9 @@ const ContactSection = () => {
         {!messageSent && !error && (
           <div className={style.formContainer}>
             <form onSubmit={(e) => submitForm(e)}>
-              <label htmlFor="contactName">Full Name</label>
+              <label htmlFor="contactName">
+                {contactSection[language].form.name}
+              </label>
               <input
                 onChange={(e) => {
                   setFormData({
@@ -82,12 +88,14 @@ const ContactSection = () => {
                 type="text"
                 name="contactName"
                 id="contactName"
-                placeholder="Your name"
+                placeholder={contactSection[language].placeholders.name}
                 required
                 value={formData.contactName}
               />
 
-              <label htmlFor="contactEmail">Email</label>
+              <label htmlFor="contactEmail">
+                {contactSection[language].form.email}
+              </label>
               <input
                 onChange={(e) => {
                   setFormData({
@@ -98,12 +106,14 @@ const ContactSection = () => {
                 type="email"
                 name="contactEmail"
                 id="contactEmail"
-                placeholder="Your email"
+                placeholder={contactSection[language].placeholders.email}
                 required
                 value={formData.contactEmail}
               />
 
-              <label htmlFor="contactMessage">Message</label>
+              <label htmlFor="contactMessage">
+                {contactSection[language].form.message}
+              </label>
               <textarea
                 onChange={(e) => {
                   setFormData({
@@ -115,12 +125,16 @@ const ContactSection = () => {
                 id="contactMessage"
                 cols="30"
                 rows="10"
-                placeholder="Your message"
+                placeholder={contactSection[language].placeholders.message}
                 required
                 value={formData.contactMessage}
               ></textarea>
 
-              {!loading && <input className={style.formButton} type="submit" />}
+              {!loading && (
+                <button className={style.formButton} type="submit">
+                  {contactSection[language].button}
+                </button>
+              )}
             </form>
           </div>
         )}
@@ -128,17 +142,16 @@ const ContactSection = () => {
           <PulseLoader
             color="rgb(134, 153, 223)"
             loading={loading}
-            aria-label="Loading Animation"
+            aria-label={contactSection[language].loadingAria}
           />
         )}
         {messageSent && (
-          <p className={style.messageNote}>Your message was sent!</p>
+          <p className={style.messageNote}>
+            {contactSection[language].success}
+          </p>
         )}
         {error && (
-          <p className={style.messageNote}>
-            Your message could not be sent. Please contact me via LinkedIn or
-            Github.
-          </p>
+          <p className={style.messageNote}>{contactSection[language].error}</p>
         )}
       </div>
     </section>

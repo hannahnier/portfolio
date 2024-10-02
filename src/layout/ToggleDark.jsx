@@ -1,7 +1,9 @@
 import style from "../styles/layout.module.css";
-import { useNavContext } from "../utils/Context";
+import { useNavContext } from "../utils/NavProvider";
+import moon from "../assets/icons/toggle-moon.svg";
+import sun from "../assets/icons/toggle-sun.svg";
 
-const Toggle = () => {
+const ToggleDark = () => {
   const { darkmode, setDarkmode } = useNavContext();
 
   const toggleDarkmode = () => {
@@ -17,9 +19,9 @@ const Toggle = () => {
       }
       onClick={toggleDarkmode}
     >
-      <div className={style.toggleInner}></div>
+      <img src={darkmode ? moon : sun} className={style.toggleInner} />
     </div>
   );
 };
 
-export default Toggle;
+export default ToggleDark;

@@ -1,8 +1,11 @@
 import style from "../styles/layout.module.css";
-import { useNavContext } from "../utils/Context";
+import { useLangContext } from "../utils/LangProvider";
+import { useNavContext } from "../utils/NavProvider";
+import { navbar } from "../utils/dictionary";
 
 const Navigation = () => {
   const { activeNav, setActiveNav } = useNavContext();
+  const { language } = useLangContext();
 
   return (
     <nav>
@@ -14,7 +17,7 @@ const Navigation = () => {
             onClick={() => setActiveNav("#")}
             className={activeNav === "#" ? style.active : ""}
           >
-            Start
+            {navbar[language].start}
           </a>
         </li>
         <li>
@@ -24,7 +27,7 @@ const Navigation = () => {
             onClick={() => setActiveNav("#work")}
             className={activeNav === "#work" ? style.active : ""}
           >
-            Work
+            {navbar[language].work}
           </a>
         </li>
         <li>
@@ -34,7 +37,7 @@ const Navigation = () => {
             onClick={() => setActiveNav("#about")}
             className={activeNav === "#about" ? style.active : ""}
           >
-            About
+            {navbar[language].about}
           </a>
         </li>
         <li>
@@ -44,7 +47,7 @@ const Navigation = () => {
             onClick={() => setActiveNav("#contact")}
             className={activeNav === "#contact" ? style.active : ""}
           >
-            Contact
+            {navbar[language].contact}
           </a>
         </li>
       </ul>

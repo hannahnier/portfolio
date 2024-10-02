@@ -1,5 +1,5 @@
 import "./App.css";
-import { useNavContext } from "./utils/Context";
+import { useNavContext } from "./utils/NavProvider";
 import Router from "./utils/Router";
 
 function App() {

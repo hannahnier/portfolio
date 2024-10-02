@@ -99,7 +99,8 @@ li a {
 
 .selectOuter {
   height: 80%;
-  width: 55px;
+  width: 100%;
+  max-width: 38px;
   display: flex;
   align-self: center;
 }
@@ -147,6 +148,9 @@ footer {
     -webkit-appearance: auto; /* Chrome, Safari */
     -moz-appearance: auto; /* Firefox */
     appearance: auto; /* Standard */
+  }
+  .selectOuter {
+    max-width: 60px;
   }
   .toggleBox {
     width: 55px;

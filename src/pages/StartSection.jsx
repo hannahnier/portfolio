@@ -16,7 +16,11 @@ const StartSection = () => {
   const { language } = useLangContext();
   const textRef = useRef(null);
   const [typedText, setTypedText] = useState("");
-  const fullText = startSection[language].title;
+  const [fullText, setFullText] = useState(startSection[language].title);
+
+  useEffect(() => {
+    setFullText(startSection[language].title);
+  }, [language]);
 
   useEffect(() => {
     let letterCount = 0;

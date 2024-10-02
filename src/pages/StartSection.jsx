@@ -45,7 +45,7 @@ const StartSection = () => {
     startTyping();
 
     return () => clearInterval(typingInterval);
-  }, [fullText]);
+  }, [fullText, language]);
 
   useEffect(() => {
     if (textRef.current) {

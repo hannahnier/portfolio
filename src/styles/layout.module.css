@@ -27,7 +27,7 @@ ul {
 
 li {
   list-style: none;
-  width: 75px;
+  width: 68px;
 }
 
 li a {
@@ -75,7 +75,6 @@ li a {
   background-color: var(--background);
   height: 80%;
   margin-left: 2vw;
-  width: 55px;
   border-radius: 15px;
   display: flex;
   align-items: center;
@@ -116,6 +115,9 @@ li a {
   text-align: center;
   cursor: pointer;
   background-color: var(--white);
+  -webkit-appearance: none; /* Chrome, Safari */
+  -moz-appearance: none; /* Firefox */
+  appearance: none; /* Standard */
 }
 
 /* Footer */
@@ -140,5 +142,13 @@ footer {
 @media (min-width: 576px) {
   li {
     width: 85px;
+  }
+  .selectInner {
+    -webkit-appearance: auto; /* Chrome, Safari */
+    -moz-appearance: auto; /* Firefox */
+    appearance: auto; /* Standard */
+  }
+  .toggleBox {
+    width: 55px;
   }
 }

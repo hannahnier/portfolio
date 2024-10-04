@@ -2,7 +2,7 @@
 
 # Portfolio
 
-Diese vollständig responsive Single-Page-Portfolio-Anwendung wurde mit React und Vite erstellt und verwendet CSS-Module für das Styling. Das Kontaktformular ist mit einem kleinen Server verknüpft, um im Backend Emails zu senden.
+Dieses vollständig responsive Single-Page-Portfolio wurde mit React und Vite erstellt und verwendet CSS-Module für das Styling. Das Kontaktformular ist mit einem kleinen Server verknüpft, um im Backend Emails zu senden. Als Sprache kann entweder Englisch oder Deutsch ausgewählt werden.
 
 ## Vorschau
 
@@ -43,13 +43,14 @@ Wenn du das Projekt lokal ausführen möchtest, folge bitte diesen Schritten:
 - **React** & **Vite**
 - **CSS-Module** für das Styling
 - **Node.js & Express.js** für den Backend-Server
-- **Nodemailer** für die E-Mail-Funktionalität
+- **Nodemailer** für die E-Mail-Funktionalität des Kontaktformulars
+- **Eigenes Wörterbuch** für die Übersetzung der Inhalte je nach gewünschter Sprache
 
 ---
 
 # English Version
 
-This fully responsive single-page portfolio application was built with React and Vite and uses CSS Modules for styling.
+This fully responsive single-page portfolio was built with React and Vite and uses CSS Modules for styling. The contact form is linked to a small server to send emails in the backend. Either English or German can be selected as the language.
 
 ## Preview
 
@@ -91,5 +92,5 @@ If you want to run the project locally, please follow these steps:
 - **React** & **Vite**
 - **CSS Modules** for styling
 - **Node.js & Express.js** for the backend server
-- **Nodemailer** for email functionality
-- **Environment Variables** for secure configuration of sensitive data like email credentials
+- **Nodemailer** for email functionality linked to the contact form
+- **Own dictionary** for the translation of content depending on the desired language

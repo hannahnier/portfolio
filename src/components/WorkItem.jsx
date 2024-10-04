@@ -7,12 +7,15 @@ const WorkItem = ({ url, name, tech, imgSrc, gitHub, collab }) => {
   const { language } = useLangContext();
   return (
     <div className={style.workItemBox}>
-      <a
-        target="_blank"
-        className={style.screenshot}
-        href={url}
-        style={{ backgroundImage: `url(${imgSrc})` }}
-      ></a>
+      <a target="_blank" className={style.screenshot} href={url}>
+        <div style={{ height: "200px", textAlign: "center" }}>
+          <img
+            src={imgSrc}
+            style={{ height: "100%", width: "100%", objectFit: "contain" }}
+            alt="App Screenshot"
+          />
+        </div>
+      </a>
       <div className={style.text}>
         <h3>{name}</h3>
         <p>{tech}</p>

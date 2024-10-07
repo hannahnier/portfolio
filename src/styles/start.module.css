@@ -108,11 +108,11 @@ main .welcome h1:hover {
     transform: rotate(45deg);
   }
   70% {
-    transform: translate(150%, 200%) rotate(30deg);
+    transform: translate(100%, 200%) rotate(30deg);
   }
 
   90% {
-    transform: translate(70vw, -60vh) rotate(20deg);
+    transform: translate(50vw, -50vh) rotate(20deg) scale(0.01);
     opacity: 1;
   }
   91% {

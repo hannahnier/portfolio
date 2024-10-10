@@ -24,16 +24,13 @@ const ContactSection = () => {
     e.preventDefault();
     setLoading(true);
     const sendData = async () => {
+      const backendUrl = import.meta.env.VITE_backendUrl;
       try {
-        const dataRaw = await fetch(
-          "https://hannahnier-server.onrender.com/sendemail",
-          // "http://localhost:3000/sendemail", // only for testing
-          {
-            method: "POST",
-            body: JSON.stringify(formData),
-            headers: { "Content-Type": "application/json" },
-          }
-        );
+        const dataRaw = await fetch(backendUrl, {
+          method: "POST",
+          body: JSON.stringify(formData),
+          headers: { "Content-Type": "application/json" },
+        });
         const data = await dataRaw.json();
 
         // handling the result (message was either sent or error):

@@ -13,7 +13,7 @@ import { useLangContext } from "../utils/LangProvider";
 
 const items = [
   {
-    url: "https://gemischtegefuehle.onrender.com/",
+    url: "https://gemischtegefuehle-app.onrender.com/",
     name: "gemischteGefühle",
     collab: [
       {

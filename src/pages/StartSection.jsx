@@ -20,32 +20,43 @@ const StartSection = () => {
 
   useEffect(() => {
     setFullText(startSection[language].title);
+    setTypedText("");
   }, [language]);
 
   useEffect(() => {
     let letterCount = 0;
-    let typingInterval;
+    let typingInterval = null;
+    let timeoutInterval = null;
 
     const startTyping = () => {
+      clearInterval(typingInterval);
+      clearTimeout(timeoutInterval);
+      letterCount = 0;
+      setTypedText("");
+
       typingInterval = setInterval(() => {
         if (letterCount < fullText.length) {
           setTypedText(fullText.substring(0, letterCount + 1));
           letterCount++;
         } else {
           clearInterval(typingInterval);
-          setTimeout(() => {
+          timeoutInterval = setTimeout(() => {
+            clearTimeout(timeoutInterval);
             setTypedText("");
             letterCount = 0;
             startTyping();
-          }, 8000);
+          }, 6000);
         }
       }, 250);
     };
 
     startTyping();
 
-    return () => clearInterval(typingInterval);
-  }, [fullText, language]);
+    return () => {
+      clearInterval(typingInterval);
+      clearTimeout(timeoutInterval);
+    };
+  }, [fullText]);
 
   useEffect(() => {
     if (textRef.current) {

@@ -135,7 +135,7 @@ main .welcome h1:hover {
 .main .notebookContainer a {
   font-family: "Courier New", Courier, monospace;
   font-size: 56px;
-  color: var(--primary);
+  color: var(--secondary);
   text-decoration: none;
   animation: appear 1s 9.5s both;
 }

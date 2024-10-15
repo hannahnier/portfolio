@@ -87,6 +87,6 @@ export const contactSection = {
 };
 
 export const footer = {
-  english: "2024 Hannah Rein. All rights reserved.",
-  german: "2024 Hannah Rein. Alle Rechte vorbehalten.",
+  english: "2024 Hannah Rein",
+  german: "2024 Hannah Rein",
 };

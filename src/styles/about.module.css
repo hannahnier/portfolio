@@ -74,7 +74,7 @@
 
 .techStackContainer h4 {
   background-color: var(--secondary);
-  color: var(--background);
+  color: var(--fontForDarkBg);
   border-radius: 0.5em;
   padding: 0.5em;
   margin: 0.2em;

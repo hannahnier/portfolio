@@ -8,25 +8,26 @@
   --background: white;
   --primary: #ffd43b;
   --primaryLight: hsl(47, 100%, 82%);
-  --secondary: #504077;
+  --secondary: #404477;
   --font: rgb(8, 10, 37);
+  --fontForDarkBg: white;
 }
 
 /* COLORS: Dark */
 
 [data-theme="dark"] {
-  --background: rgb(8, 10, 37);
+  --background: #1f1f36;
   --primary: #ffd43b;
   --primaryLight: hsl(47, 100%, 82%);
   --secondary: rgb(134, 153, 223);
   --font: white;
+  --fontForDarkBg: rgb(8, 10, 37);
 }
 
 * {
   /* COLORS: Universal: */
   --darkFont: rgb(8, 10, 37);
   --white: white;
-  --purple: #504077;
   --blue: rgb(134, 153, 223);
 
   box-sizing: border-box;

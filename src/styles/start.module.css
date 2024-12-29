@@ -151,11 +151,11 @@ main .welcome h1:hover {
 
 @keyframes appear {
   from {
-    display: none;
+    opacity: 0;
     font-size: 0.8rem;
   }
   to {
-    display: block;
+    opacity: 1;
   }
 }
 

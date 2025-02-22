@@ -11,13 +11,13 @@ export const navbar = {
 export const startSection = {
   english: {
     title: "Hi, I am Hannah",
-    subtitle: "A Full-stack Web Developer based in Leipzig",
+    subtitle: "A Full-stack Web Developer and Test Automation Engineer",
     workRef: "My Projects",
     workRefButton: "Check out my work",
   },
   german: {
     title: "Hi, ich bin Hannah",
-    subtitle: "Full-stack Web Entwicklerin aus Leipzig",
+    subtitle: "Full-stack Web Entwicklerin und Testautomatisiererin",
     workRef: "Meine Projekte",
     workRefButton: "Aktuelle Projekte",
   },
@@ -37,21 +37,21 @@ export const aboutSection = {
     title: "About Me",
     photoTag: "A photo of me",
     bubble1:
-      "Before delving into the world of web development, I was a Social Scientist. This has provided me with the ability to break down and map complex issues.",
+      "Before shifting towards IT, I was a Social Scientist. This has equipped me with the ability to analyze and break down complex issues.",
     bubble2:
-      "I have always been captivated by numbers, logics and code. That is why I am excited to pursue this passion professionally now.",
+      "I've always been intrigued by numbers, logic and coding. That is why I am excited to finally embrace my inner geek.",
     bubble3:
-      "Whether frontend or backend - I work diligently to create inspiring and innovative solutions.",
+      "Whether frontend or backend - I work diligently to create inspiring and thoughtful solutions.",
   },
   german: {
     title: "Infos",
     photoTag: "Ein Bild von mir",
     bubble1:
-      "Dass ich früher Sozialwissenschaftlerin war, hilft mir auch in der Welt der Entwicklung. Ich liebe es, komplexe Fragestellungen herunterzubrechen und Dinge analytisch anzugehen.",
+      "Dass ich mal Sozialwissenschaftlerin war, versetzt mich in die Lage, komplexe Fragestellungen herunterzubrechen und Dinge analytisch anzugehen.",
     bubble2:
-      "Die Begeisterung für Zahlen, Logik und Code hat mich schon immer begleitet. Umso mehr freue ich mich, ihr nun auch beruflich so richtig nachzugehen.",
+      "Die Begeisterung für Zahlen, Logik und Code hatte ich schon immer. Jetzt kann ich endlich richtig abnerden.",
     bubble3:
-      "Egal ob Frontend oder Backend – ich setze alles daran, frische und innovative Lösungen zu entwickeln.",
+      "Ob Frontend oder Backend - auf der Suche nach durchdachten Lösungen werde ich (fast) immer fündig.",
   },
 };
 
@@ -87,6 +87,6 @@ export const contactSection = {
 };
 
 export const footer = {
-  english: "2024 Hannah Rein",
-  german: "2024 Hannah Rein",
+  english: "2025 Hannah Rein",
+  german: "2025 Hannah Rein",
 };

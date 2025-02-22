@@ -3,12 +3,13 @@ import photo from "../assets/photo.jpg";
 import Animated from "../components/Animated";
 import AnimatedTurn from "../components/AnimatedTurn";
 import { useLangContext } from "../utils/LangProvider";
-import { aboutSection, startSection } from "../utils/dictionary";
+import { aboutSection } from "../utils/dictionary";
 
 const AboutSection = () => {
   const { language } = useLangContext();
   const techStack = [
     "JavaScript",
+    "TypeScript",
     "HTML5",
     "CSS3",
     "Tailwind",

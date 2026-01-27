@@ -87,6 +87,6 @@ export const contactSection = {
 };
 
 export const footer = {
-  english: "2025 Hannah Rein",
-  german: "2025 Hannah Rein",
+  english: "2026 Hannah Rein",
+  german: "2026 Hannah Rein",
 };

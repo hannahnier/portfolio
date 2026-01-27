@@ -1,6 +1,6 @@
 import { sendConfirmationMail, sendEmail } from "./sendEmail.js";
 
-export const getUser = async (req, res, next) => {
+export const ping = async (req, res, next) => {
   try {
     console.log("Ping-Request has happened");
     res.status(200).json({ msg: "server is running" });
